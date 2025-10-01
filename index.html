@@ -12,8 +12,7 @@
 :root{
   --bg:#0b1320; --panel:#111a2c; --muted:#a9b6d6;
   --n1:#19e3ff; --n2:#7a5cff; --grad:linear-gradient(135deg,var(--n1),var(--n2));
-  --r:16px; --shadow:0 14px 42px rgba(0,0,0,.45);
-  --tg:#229ED9;
+  --r:16px; --shadow:0 14px 42px rgba(0,0,0,.45); --tg:#229ED9;
 }
 *{box-sizing:border-box}
 body{margin:0;background:radial-gradient(1200px 800px at 70% -10%,rgba(122,92,255,.18),transparent),var(--bg);color:#fff;font-family:Poppins,system-ui}
@@ -28,60 +27,34 @@ header{display:flex;align-items:center;justify-content:space-between;gap:14px;ma
 .brand h1{margin:0;font-size:22px}
 .brand small{display:block;color:var(--muted)}
 
-/* Hero + cards */
+/* Content */
 .hero{background:linear-gradient(180deg,rgba(17,26,44,.92),rgba(17,26,44,.65));border:1px solid rgba(255,255,255,.08);border-radius:var(--r);padding:22px;box-shadow:var(--shadow)}
 .hero h2{margin:0 0 8px;font-size:30px;line-height:1.15}
 .glow{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent;text-shadow:0 0 18px rgba(25,227,255,.35)}
+
 .grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin:18px 0}
 .card{background:var(--panel);border-radius:14px;padding:16px;border:1px solid rgba(255,255,255,.06)}
 .card h3{margin:0 0 6px}
 .price{font-size:20px;font-weight:700;background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
-.tg-btn{display:flex;align-items:center;justify-content:center;gap:8px;text-align:center;padding:10px 14px;border-radius:10px;background:var(--tg);font-weight:800;color:#fff;box-shadow:0 0 18px rgba(34,158,217,.6);transition:.2s}
+
+.tg-btn{display:flex;align-items:center;justify-content:center;gap:8px;text-align:center;
+  padding:10px 14px;border-radius:10px;background:var(--tg);font-weight:800;color:#fff;
+  box-shadow:0 0 18px rgba(34,158,217,.6);transition:.2s}
 .tg-btn:hover{transform:scale(1.05);box-shadow:0 0 24px rgba(34,158,217,.9)}
 
 footer{color:var(--muted);text-align:center;margin:24px 0 30px}
 footer h3{margin:12px 0 6px;font-size:18px;color:#fff}
 .contact a{display:block;margin:6px 0;color:#19e3ff}
 @media(max-width:640px){.grid{grid-template-columns:1fr}}
-
-/* Intro splash */
-.splash{
-  position:fixed;inset:0;display:grid;place-items:center;
-  background:radial-gradient(800px 600px at 70% -10%,rgba(122,92,255,.25),transparent),#070c16;
-  z-index:999; animation: fadeOut 1.8s ease 1.2s forwards;
-}
-.splash .box{
-  text-align:center; padding:28px 22px; border-radius:18px;
-  background:linear-gradient(180deg,rgba(17,26,44,.95),rgba(17,26,44,.75));
-  border:1px solid rgba(255,255,255,.08);
-  box-shadow:0 20px 60px rgba(0,0,0,.55)
-}
-.splash h1{margin:0;font-size:26px;background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
-.splash p{margin:8px 0 14px;color:#cfe2ff}
-.splash .tap{font-size:12px;color:#9fb1d8}
-@keyframes fadeOut{to{opacity:0;visibility:hidden}}
 </style>
 </head>
 <body>
-
-<!-- Intro Splash -->
-<div id="splash" class="splash" onclick="closeSplash()">
-  <div class="box">
-    <h1>KK Game Shop</h1>
-    <p>Fast ML Diamonds • Order via Telegram</p>
-    <a class="tg-btn" href="https://t.me/+ueIyqsGTqaI4MTVl" target="_blank" rel="noopener">
-      <!-- Telegram icon -->
-      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="white" viewBox="0 0 24 24"><path d="M9.999 15.984 9.94 21s.728-.105 1.035-.443c.245-.266 2.499-2.414 2.499-2.414l4.997 3.865c.916.507 1.573.244 1.802-.85l3.261-15.361.001-.001c.289-1.328-.48-1.844-1.371-1.519l-20.26 7.79c-1.311.507-1.291 1.244-.223 1.58l5.186 1.613 12.058-7.6c.568-.346 1.087-.154.66.222L9.999 15.984Z"/></svg>
-      Start Order on Telegram
-    </a>
-    <div class="tap">Tap anywhere to continue</div>
-  </div>
-</div>
-
 <div class="wrap">
+  <!-- Header -->
   <header>
     <div class="brand">
       <div class="badge" aria-hidden="true">
+        <!-- simple gamepad icon -->
         <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
           <rect x="3" y="9" width="18" height="8" rx="4" stroke="white" stroke-width="1.5"/>
           <path d="M7 13h3M8.5 11.5v3" stroke="white" stroke-width="1.5" stroke-linecap="round"/>
@@ -100,6 +73,7 @@ footer h3{margin:12px 0 6px;font-size:18px;color:#fff}
     </a>
   </header>
 
+  <!-- Hero + products -->
   <section class="hero">
     <h2><span class="glow">Instant ML Diamonds</span> Top-Up</h2>
     <p style="color:#a9b6d6">Delivery 5–10 minutes • Proof screenshot provided</p>
@@ -132,6 +106,7 @@ footer h3{margin:12px 0 6px;font-size:18px;color:#fff}
     </div>
   </section>
 
+  <!-- Footer -->
   <footer>
     <h3>Payment Methods</h3>
     <p>WavePay: <b>09424612193</b></p>
@@ -147,16 +122,6 @@ footer h3{margin:12px 0 6px;font-size:18px;color:#fff}
     <p style="margin-top:18px">© <span id="y"></span> KK Game Shop</p>
   </footer>
 </div>
-
-<script>
-function closeSplash(){
-  const s = document.getElementById('splash');
-  s.style.animation = 'fadeOut .6s ease forwards';
-}
-setTimeout(()=>{ // auto hide after 3 seconds (incl. 1.2s delay)
-  const s = document.getElementById('splash'); if(s) s.style.display='none';
-}, 3000);
-document.getElementById("y").textContent = new Date().getFullYear();
-</script>
+<script>document.getElementById("y").textContent = new Date().getFullYear();</script>
 </body>
 </html>
