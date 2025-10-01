@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>KK Game Shop — ML Diamonds (MMK)</title>
+<meta name="description" content="Fast Mobile Legends Diamonds top-up in MMK. Order via WhatsApp or Telegram." />
+<meta name="theme-color" content="#0b1320" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#0b1320; --panel:#111a2c; --muted:#a9b6d6;
+  --n1:#19e3ff; --n2:#7a5cff; --grad:linear-gradient(135deg,var(--n1),var(--n2));
+  --r:16px; --shadow:0 14px 42px rgba(0,0,0,.45);
+}
+*{box-sizing:border-box}
+body{margin:0;background:radial-gradient(1200px 800px at 70% -10%,rgba(122,92,255,.18),transparent),var(--bg);color:#fff;font-family:Poppins,system-ui}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:980px;margin:auto;padding:20px}
+header{display:flex;align-items:center;justify-content:space-between;gap:14px;margin:8px 0 18px}
+.brand{display:flex;align-items:center;gap:12px}
+.badge{width:58px;height:58px;border-radius:50%;background:var(--grad);display:grid;place-items:center;box-shadow:0 0 26px rgba(25,227,255,.45)}
+.badge svg{width:30px;height:30px;filter:drop-shadow(0 0 8px rgba(25,227,255,.8))}
+.brand h1{margin:0;font-size:22px}
+.brand small{display:block;color:var(--muted)}
+.hero{background:linear-gradient(180deg,rgba(17,26,44,.92),rgba(17,26,44,.65));border:1px solid rgba(255,255,255,.08);border-radius:var(--r);padding:22px;box-shadow:var(--shadow);position:relative;overflow:hidden}
+.hero h2{margin:0 0 8px;font-size:30px;line-height:1.15}
+.glow{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent;text-shadow:0 0 18px rgba(25,227,255,.35)}
+.actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:12px}
+.btn{display:inline-block;padding:10px 16px;border-radius:12px;font-weight:800;box-shadow:0 0 14px rgba(25,227,255,.3)}
+.btn.grad{background:var(--grad)}
+.btn.ghost{background:#0f1729;border:1px solid rgba(255,255,255,.14)}
+.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin:18px 0}
+.card{background:var(--panel);border-radius:14px;padding:16px;border:1px solid rgba(255,255,255,.06)}
+.card h3{margin:0 0 6px}
+.price{font-size:20px;font-weight:700;background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+.card .meta{color:#dbe6ff;font-size:13px;margin:6px 0 12px}
+.card .order{display:block;text-align:center;padding:10px 12px;border-radius:10px;background:var(--grad);font-weight:800}
+.note{color:#a9b6d6;margin-top:6px}
+footer{color:var(--muted);text-align:center;margin:24px 0 30px}
+@media(max-width:900px){.grid{grid-template-columns:1fr 1fr}}
+@media(max-width:560px){.grid{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="brand">
+      <div class="badge" aria-hidden="true">
+        <!-- simple gamepad mark -->
+        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect x="3" y="9" width="18" height="8" rx="4" stroke="white" stroke-width="1.5"/>
+          <path d="M7 13h3M8.5 11.5v3" stroke="white" stroke-width="1.5" stroke-linecap="round"/>
+          <circle cx="16.5" cy="12.5" r="1.1" fill="white"/><circle cx="18.5" cy="12.5" r="1.1" fill="white"/>
+          <circle cx="16.5" cy="14.5" r="1.1" fill="white"/><circle cx="18.5" cy="14.5" r="1.1" fill="white"/>
+        </svg>
+      </div>
+      <div>
+        <h1>KK Game Shop</h1>
+        <small>Mobile Legends Diamonds • MMK</small>
+      </div>
+    </div>
+    <div class="actions">
+      <a id="tgTop" class="btn grad" href="https://t.me/+ueIyqsGTqaI4MTVl" target="_blank" rel="noopener">Telegram</a>
+      <a id="waTop" class="btn ghost" href="#" target="_blank" rel="noopener">WhatsApp</a>
+    </div>
+  </header>
+
+  <section class="hero">
+    <h2><span class="glow">Instant ML Diamonds</span> Top-Up (MMK)</h2>
+    <p class="note">Average delivery: 5–10 minutes • Safe method • Proof screenshot provided</p>
+    <div class="grid" id="products">
+      <!-- items injected by JS -->
+    </div>
+    <p class="note">Need other amounts? DM on Telegram.</p>
+  </section>
+
+  <footer>
+    © <span id="y"></span> KK Game Shop •
+    <a href="mailto:eldenlordkh@gmail.com">eldenlordkh@gmail.com</a> •
+    <a href="https://t.me/+ueIyqsGTqaI4MTVl" target="_blank" rel="noopener">Telegram</a>
+  </footer>
+</div>
+
+<script>
+/* ==== Your contact + products ==== */
+const PHONE = "+95 9 788 169856"; // WhatsApp
+const TG_LINK = "https://t.me/+ueIyqsGTqaI4MTVl";
+
+const ITEMS = [
+  {label:"56 Diamonds", price:"4,000 MMK"},
+  {label:"112 Diamonds", price:"6,000 MMK"},
+  {label:"233 Diamonds", price:"10,000 MMK"},
+  {label:"570 Diamonds", price:"23,000 MMK"},
+];
+
+/* ==== Helpers ==== */
+const waUrl = (msg) =>
+  "https://wa.me/" + PHONE.replace(/\D/g,"") + "?text=" + encodeURIComponent(msg);
+
+/* Fill buttons */
+document.getElementById("waTop").href = waUrl("Hi! I want to order ML Diamonds.");
+
+/* Build product cards */
+const grid = document.getElementById("products");
+grid.innerHTML = ITEMS.map(it => `
+  <article class="card">
+    <h3>${it.label}</h3>
+    <div class="price">${it.price}</div>
+    <div class="meta">Send Game ID & Server</div>
+    <a class="order" target="_blank" rel="noopener"
+       href="${waUrl(`Order ML: ${it.label} (${it.price})`)}">Order via WhatsApp</a>
+    <div class="note" style="text-align:center;margin-top:8px">
+      or <a href="${TG_LINK}" target="_blank" rel="noopener">message on Telegram</a>
+    </div>
+  </article>
+`).join("");
+
+/* year */
+document.getElementById("y").textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
