@@ -44,11 +44,40 @@ footer h3{margin:12px 0 6px;font-size:18px;color:#fff}
 .contact a{display:block;margin:6px 0;color:#19e3ff}
 @media(max-width:640px){.grid{grid-template-columns:1fr}}
 
-g,rgba(17,26,44,.95),rgba(17,26,44,.75));
-  border:1px solid rgba(255,2/* 
+/* Intro splash */
+.splash{
+  position:fixed;inset:0;display:grid;place-items:center;
+  background:radial-gradient(800px 600px at 70% -10%,rgba(122,92,255,.25),transparent),#070c16;
+  z-index:999; animation: fadeOut 1.8s ease 1.2s forwards;
+}
+.splash .box{
+  text-align:center; padding:28px 22px; border-radius:18px;
+  background:linear-gradient(180deg,rgba(17,26,44,.95),rgba(17,26,44,.75));
+  border:1px solid rgba(255,255,255,.08);
+  box-shadow:0 20px 60px rgba(0,0,0,.55)
+}
+.splash h1{margin:0;font-size:26px;background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+.splash p{margin:8px 0 14px;color:#cfe2ff}
+.splash .tap{font-size:12px;color:#9fb1d8}
+@keyframes fadeOut{to{opacity:0;visibility:hidden}}
+</style>
+</head>
+<body>
 
-
+<!-- Intro Splash -->
+<div id="splash" class="splash" onclick="closeSplash()">
+  <div class="box">
+    <h1>KK Game Shop</h1>
+    <p>Fast ML Diamonds • Order via Telegram</p>
+    <a class="tg-btn" href="https://t.me/+ueIyqsGTqaI4MTVl" target="_blank" rel="noopener">
+      <!-- Telegram icon -->
+      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="white" viewBox="0 0 24 24"><path d="M9.999 15.984 9.94 21s.728-.105 1.035-.443c.245-.266 2.499-2.414 2.499-2.414l4.997 3.865c.916.507 1.573.244 1.802-.85l3.261-15.361.001-.001c.289-1.328-.48-1.844-1.371-1.519l-20.26 7.79c-1.311.507-1.291 1.244-.223 1.58l5.186 1.613 12.058-7.6c.568-.346 1.087-.154.66.222L9.999 15.984Z"/></svg>
+      Start Order on Telegram
+    </a>
+    <div class="tap">Tap anywhere to continue</div>
+  </div>
 </div>
+
 <div class="wrap">
   <header>
     <div class="brand">
@@ -62,7 +91,7 @@ g,rgba(17,26,44,.95),rgba(17,26,44,.75));
       </div>
       <div>
         <h1>KK Game Shop</h1>
-        <small>Mobile Legends Diamonds •Mobile legends diamondsများကို စိတ်ချယုံကြည်စွာဝယ်ယူနိုငိပါပြီ ခင်ဗျာ</small>
+        <small>Mobile Legends Diamonds • Myanmar MMK</small>
       </div>
     </div>
     <a class="tg-btn" href="https://t.me/+ueIyqsGTqaI4MTVl" target="_blank" rel="noopener">
@@ -105,8 +134,8 @@ g,rgba(17,26,44,.95),rgba(17,26,44,.75));
 
   <footer>
     <h3>Payment Methods</h3>
-    <p>WavePay: <b>09424612193(nay lin htun)</b></p>
-    <p>KBZPay: <b>09750977332(khant htae)</b></p>
+    <p>WavePay: <b>09424612193</b></p>
+    <p>KBZPay: <b>09750977332</b></p>
 
     <h3>Contact</h3>
     <div class="contact">
