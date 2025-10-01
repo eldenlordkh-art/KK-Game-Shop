@@ -45,11 +45,15 @@ footer h3{margin:12px 0 6px;font-size:18px;color:#fff}
 @media(max-width:640px){.grid{grid-template-columns:1fr}}
 
 /* Intro splash */
-.splash{
-  position:fixed;inset:0;display:grid;place-items:center;
-  background:radial-gradient(800px 600px at 70% -10%,rgba(122,92,255,.25),transparent),#070c16;
-  z-index:999; animation: fadeOut 1.8s ease 1.2s forwards;
-}
+<!-- Intro Splash -->
+<div id="splash" class="splash" onclick="closeSplash()">
+  <div class="box">
+    <h1>KK Game Shop</h1>
+    <p>Fast ML Diamonds • Myanmar Top-Up</p>
+    <div class="tap">Tap anywhere to continue</div>
+  </div>
+</div>
+
 .splash .box{
   text-align:center; padding:28px 22px; border-radius:18px;
   background:linear-gradient(180deg,rgba(17,26,44,.95),rgba(17,26,44,.75));
